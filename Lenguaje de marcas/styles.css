@@ -1,0 +1,11 @@
+@font-face {
+    font-family: 'Asenine';
+    src: url('assets/ASENINE.ttf');
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: #555555;
+    background-color: #ffffff;
+}
