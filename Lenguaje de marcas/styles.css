@@ -90,3 +90,54 @@ body {
     font-size: 14px;
     margin-top: 15px;
 }
+
+.contenedor-principal {
+    width: 95%;
+    max-width: 1800px;
+    margin: 50px auto;
+    display: flex;
+    gap: 50px;
+}
+
+.contenido-eventos {
+    flex: 3;
+}
+.titulo-seccion {
+    font-family: 'Asenine';
+    font-size: 32px;
+    text-transform: uppercase;
+    border-left: 5px solid #ba007c;
+    padding-left: 15px;
+    margin-bottom: 40px;
+}
+
+.tarjeta-evento {
+    display: flex;
+    gap: 25px;
+    margin-bottom: 40px;
+    padding-bottom: 25px;
+    border-bottom: 1px solid #eee;
+}
+
+.tarjeta-evento:hover .imagen-evento {
+    transform: scale(1.02);
+}
+
+.info-evento h3 {
+    font-family: 'Asenine';
+    font-size: 24px;
+    margin: 5px 0;
+    text-transform: uppercase;
+}
+
+.imagen-evento {
+    width: 250px;
+    height: 160px;
+    border-radius: 8px;
+    object-fit: cover;
+    transition: 0.3s;
+}
+
+.categoria-musica { border-bottom: 4px solid #ba007c; }
+.categoria-teatro { border-bottom: 4px solid #009bdb; }
+.categoria-arte { border-bottom: 4px solid #ff8c00; }
