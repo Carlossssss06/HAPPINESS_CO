@@ -9,3 +9,84 @@ body {
     color: #555555;
     background-color: #ffffff;
 }
+
+.cabecera-principal {
+    background-color: #ffffff;
+    border-bottom: 1px solid #f0f0f0;
+    padding: 15px 0;
+}
+
+.contenedor-cabecera {
+    width: 95%;
+    max-width: 1800px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logotipo img {
+    height: 45px; 
+    display: block;
+}
+
+.navegacion ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.navegacion ul li {
+    margin-left: 30px;
+}
+
+.navegacion ul li a {
+    text-decoration: none;
+    color: #555555;
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    transition: color 0.3s;
+}
+
+.navegacion ul li a:hover, 
+.navegacion ul li a.activo {
+    color: #ba007c;
+    border-bottom: 2px solid #ba007c;
+    padding-bottom: 5px;
+}
+
+.portada {
+    position: relative;
+    height: 500px;
+    background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://tse3.mm.bing.net/th/id/OIP.dQZsYaPJrX0oVpNs714slQHaE8?w=600&h=400&rs=1&pid=ImgDetMain&o=7&rm=3');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+}
+
+.portada h1 {
+    font-family: 'Asenine', sans-serif;
+    font-size: 60px;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+    font-style: italic;
+    font-weight: normal;
+}
+
+.portada p {
+    background-color: #ba007c;
+    padding: 8px 25px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-size: 14px;
+    margin-top: 15px;
+}
