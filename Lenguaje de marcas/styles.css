@@ -199,3 +199,37 @@ body {
     text-transform: uppercase;
     letter-spacing: 1px;
 }
+
+.btn-agenda-completa {
+    display: block;
+    text-align: center;
+    background-color: #ba007c;
+    color: white;
+    text-decoration: none;
+    font-size: 10px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    padding: 12px;
+    border-radius: 4px;
+    margin-top: 20px;
+    transition: background 0.3s;
+}
+
+.btn-agenda-completa:hover {
+    background-color: #960064;
+}
+
+.pie-pagina {
+    background-color: #555555;
+    color: white;
+    padding: 40px 0;
+    text-align: center;
+    margin-top: 60px;
+}
+
+.logo-pie {
+    height: 30px;
+    margin-bottom: 15px;
+    opacity: 0.8;
+}
