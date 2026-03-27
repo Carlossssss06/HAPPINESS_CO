@@ -14,6 +14,10 @@ body {
     background-color: #ffffff;
     border-bottom: 1px solid #f0f0f0;
     padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
 }
 
 .contenedor-cabecera {
@@ -61,7 +65,7 @@ body {
 .portada {
     position: relative;
     height: 500px;
-    background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://tse3.mm.bing.net/th/id/OIP.dQZsYaPJrX0oVpNs714slQHaE8?w=600&h=400&rs=1&pid=ImgDetMain&o=7&rm=3');
+    background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('assets/aquasella.png');
     background-size: cover;
     background-position: center;
     display: flex;
@@ -83,12 +87,25 @@ body {
 
 .portada p {
     background-color: #ba007c;
+    color: white;
     padding: 8px 25px;
     font-weight: bold;
     letter-spacing: 2px;
     text-transform: uppercase;
     font-size: 14px;
     margin-top: 15px;
+    cursor: pointer;
+}
+
+.enlace-portada {
+    text-decoration: none;
+    transition: transform 0.3s ease;
+    display: inline-block;
+}
+
+.enlace-portada:hover {
+    transform: scale(1.05); /* Efecto sutil de crecimiento al poner el cursor */
+    cursor: pointer;
 }
 
 .contenedor-principal {
