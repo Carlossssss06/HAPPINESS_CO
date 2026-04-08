@@ -435,3 +435,70 @@ body {
     display: block;
     margin: 0 auto;
 }
+
+/*CONTACTO*/
+
+.seccion-contacto {
+    width: 90%;
+    max-width: 1000px;
+    margin: 80px auto;
+}
+
+.bloque-contacto {
+    display: flex;
+    gap: 80px;
+}
+
+.info-contacto, .formulario-contacto {
+    flex: 1;
+}
+
+.datos-directos {
+    margin-top: 30px;
+}
+
+.datos-directos p {
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+
+.grupo-input {
+    margin-bottom: 20px;
+}
+
+.grupo-input label {
+    display: block;
+    font-size: 12px;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #ba007c;
+}
+
+.grupo-input input, .grupo-input textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-family: Arial, sans-serif;
+    box-sizing: border-box; 
+}
+
+.btn-enviar {
+    background-color: #ba007c;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 1px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.3s;
+    width: 100%;
+}
+
+.btn-enviar:hover {
+    background-color: #960064;
+}
