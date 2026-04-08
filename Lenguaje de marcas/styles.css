@@ -104,7 +104,7 @@ body {
 }
 
 .enlace-portada:hover {
-    transform: scale(1.05); /* Efecto sutil de crecimiento al poner el cursor */
+    transform: scale(1.05);
     cursor: pointer;
 }
 
@@ -251,6 +251,8 @@ body {
     opacity: 0.8;
 }
 
+/*HISTORIAL DE EVENTOS*/
+
 .contenedor-cuadricula {
     display: grid;
     grid-template-columns: repeat(3, 1fr); 
@@ -273,8 +275,8 @@ body {
 }
 
 .tarjeta-evento-v2:hover {
-    transform: translateY(-5px); /* AÑADIDO: La tarjeta "flota" un poco */
-    box-shadow: 0 10px 25px rgba(0,0,0,0.1); /* AÑADIDO: Sombra más profunda */
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
 }
 
 .contenedor-imagen {
@@ -396,4 +398,40 @@ body {
     border-radius: 12px;
     box-shadow: 0 5px 15px rgba(0,0,0,0.05);
     transition: transform 0.3s ease;
+}
+
+/*SOBRE NOSOTROS*/
+
+.seccion-nosotros {
+    width: 90%;
+    max-width: 1000px;
+    margin: 80px auto;
+    padding: 0 20px;
+}
+
+.contenido-nosotros {
+    display: flex;
+    gap: 100px;
+    align-items: center;
+}
+
+.texto-nosotros {
+    flex: 1;
+}
+
+.texto-nosotros p {
+    line-height: 1.8;
+    margin-bottom: 20px;
+    font-size: 16px;
+    color: #444;
+}
+
+.imagen-nosotros {
+    flex: 1;
+}
+
+.imagen-nosotros img {
+    max-width: 80%; 
+    display: block;
+    margin: 0 auto;
 }
