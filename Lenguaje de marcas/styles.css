@@ -158,6 +158,7 @@ body {
 .categoria-musica { border-bottom: 4px solid #ba007c; }
 .categoria-teatro { border-bottom: 4px solid #009bdb; }
 .categoria-arte { border-bottom: 4px solid #ff8c00; }
+.categoria-otros { border-bottom: 4px solid #555555; }
 
 .barra-lateral {
     flex: 1;
@@ -315,6 +316,7 @@ body {
 .musica-overlay { background-color: rgba(186, 0, 124, 0.8); }
 .teatro-overlay { background-color: rgba(0, 155, 219, 0.8); }
 .arte-overlay   { background-color: rgba(255, 140, 0, 0.8); }
+.otros-overlay  { background-color: rgba(85, 85, 85, 0.8); }
 
 .descripcion-hover {
     color: white;
