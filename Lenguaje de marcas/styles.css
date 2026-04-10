@@ -354,7 +354,6 @@ body {
 .portada-eventos {
     position: relative;
     height: 400px;
-    background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://www.madrid-destino.com/sites/default/files/styles/slider/public/2023-02/EDIT.png?itok=APLkJZXr');
     background-size: cover;
     background-position: center;
     display: flex;
