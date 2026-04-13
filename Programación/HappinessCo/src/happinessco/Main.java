@@ -29,8 +29,8 @@ public class Main {
                 case 4: eliminarEvento(eventos); break;
                 case 5: añadirGaleria(eventos); break;
                 case 6: eliminarGaleria(eventos); break;
-                case 7: /* añadirFavorito(eventos, usuarios, favoritos); */ break;
-                case 8: /* eliminarFavorito(favoritos); */ break;
+                case 7: añadirFavorito(eventos, usuarios, favoritos); break;
+                case 8: eliminarFavorito(favoritos); break;
                 case 9: 
                     System.out.println("\nCerrando sesión..."); 
                     break;
@@ -193,6 +193,63 @@ public class Main {
             }
         } else {
             System.out.println("\nLa galería no existe.");
+        }
+    }
+
+    public static void añadirFavorito(HashMap<Integer, Eventos> evs, HashMap<String, Usuarios> usrs, ArrayList<Favoritos> favs) {
+        imprimirCabecera("MARCAR COMO FAVORITO");
+        if (evs.isEmpty() || usrs.isEmpty()) {
+            System.out.println("Se necesitan al menos un evento y un usuario en el sistema.");
+            return;
+        }
+
+        System.out.println("--- LISTA DE CORREOS ---");
+        for (Usuarios u : usrs.values()) System.out.println(" - " + u.getEmail());
+        
+        System.out.print("\nE-mail del usuario: "); String em = teclado.nextLine();
+        System.out.print("ID del evento: "); int id = teclado.nextInt(); teclado.nextLine();
+
+        if (evs.containsKey(id) && usrs.containsKey(em)) {
+            favs.add(new Favoritos(id, em));
+            System.out.println("\n✔ ÉXITO: Se ha añadido a la lista de favoritos.");
+        } else {
+            System.out.println("\n[!] ERROR: Datos de usuario o evento incorrectos.");
+        }
+    }
+
+    public static void eliminarFavorito(ArrayList<Favoritos> favoritos) {
+        imprimirCabecera("QUITAR DE FAVORITOS");
+        if (favoritos.isEmpty()) {
+            System.out.println("No hay favoritos registrados.");
+            return;
+        }
+
+        System.out.println("LISTA DE FAVORITOS:");
+        for (int i = 0; i < favoritos.size(); i++) {
+            Favoritos fav = favoritos.get(i);
+            System.out.println("[" + i + "] Usuario: " + fav.getEmailUsuario() + " | Evento ID: " + fav.getIdEvento());
+        }
+
+        System.out.print("\nIngrese el índice del favorito a eliminar: ");
+        int indice;
+        try {
+            indice = Integer.parseInt(teclado.nextLine());
+        } catch (NumberFormatException e) {
+            System.out.println("[!] Entrada inválida.");
+            return;
+        }
+
+        if (indice < 0 || indice >= favoritos.size()) {
+            System.out.println("[!] Índice fuera de rango.");
+            return;
+        }
+
+        System.out.print("¿Está seguro de eliminar este favorito? (s/n): ");
+        if (teclado.nextLine().equalsIgnoreCase("s")) {
+            favoritos.remove(indice);
+            System.out.println("\n✔ Favorito eliminado.");
+        } else {
+            System.out.println("\n[!] Operación cancelada.");
         }
     }
 }
