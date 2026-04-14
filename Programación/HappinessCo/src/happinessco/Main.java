@@ -55,7 +55,6 @@ public class Main {
         teclado.nextLine();
     }
 
-    // --- NUEVA FUNCIÓN DE APOYO ---
     public static void imprimirNavegacion() {
         System.out.println("\n[ < ] Volver atrás  |  [ + ] Menú Principal");
         System.out.println("--------------------------------------------------");
@@ -232,7 +231,6 @@ public class Main {
             System.out.print("\nID de la galería a eliminar: ");
             int idGaleria = Integer.parseInt(teclado.nextLine());
 
-            // Lógica de borrado original mantenida
             Galerias galeriaAEliminar = null;
             for (Galerias g : galerias) {
                 if (g.getId() == idGaleria) {

@@ -1,0 +1,62 @@
+create database happinessco;
+use happinessco;
+ 
+create table usuarios (
+    id int auto_increment primary key,
+    nombre varchar(50),
+    email varchar(100) unique,
+    password varchar(100)
+);
+ 
+create table eventos (
+    id int auto_increment primary key,
+    fecha date,
+    titulo varchar(100),
+    ubicacion varchar(100),
+    tipo varchar(50),
+    descripcion text
+);
+ 
+create table galerias (
+    id int auto_increment primary key,
+    titulo varchar(100),
+    id_evento int,
+    foreign key (id_evento) references eventos(id)
+);
+ 
+create table imagenes (
+    id int auto_increment primary key,
+    titulo varchar(100),
+    imagen varchar(255),
+    id_galeria int,
+    foreign key (id_galeria) references galerias(id)
+);
+ 
+create table favoritos (
+    id_usuario int,
+    id_evento int,
+    primary key (id_usuario, id_evento),
+    foreign key (id_usuario) references usuarios(id),
+    foreign key (id_evento) references eventos(id)
+);
+ 
+insert into usuarios (nombre, email, password) values
+('Carlos González', 'carlos@gmail.com', '1234'),
+('Marco Álvarez', 'marco@gmail.com', '4321'),
+('Luis Cristobal', 'luis@gmail.com', '0000');
+ 
+insert into eventos (fecha, titulo, ubicacion, tipo, descripcion) values
+('2026-06-05', 'Metropoli Gijón 2026', 'Gijón', 'musica', 'festival de musica'),
+('2026-06-15', 'FETEN 2026: Magia en Escena', 'Gijón', 'Teatro', 'espectaculo de teatro'),
+('2026-06-25', 'Llanes al Cubo 2026', 'Llanes', 'arte', 'exposiciones de arte'),
+('2026-07-01', 'Premios Princesa de Asturias 2026', 'Oviedo', 'arte', 'ceremonia de entrega de premios'),
+('2026-07-10', 'Semana Negra de Gijón 2026', 'Gijón', 'arte', 'festival literario'),
+('2026-07-22', 'Pablo Alborán en Concierto', 'Oviedo', 'musica', 'concierto de musica'),
+('2026-01-01', 'Festival de la Sidra Natural', 'Gijón', 'otros', 'evento de sidra'),
+('2026-01-12', 'Picasso y los Maestros', 'Oviedo', 'arte', 'exposicion de arte'),
+('2026-01-24', 'Descenso Internacional del Sella', 'Ribadesella', 'otros', 'evento deportivo de piraguas'),
+('2026-02-12', 'Rally Princesa de Asturias', 'Oviedo', 'otros', 'evento deportivo de rally'),
+('2026-02-09', 'Gijón Horse Show - Concurso de Saltos Internacional', 'Gijón', 'otros', 'evento deportivo de hípica'),
+('2026-02-06', 'Estreno Nacional: "La Madre"', 'Avilés', 'teatro', 'estreno de obra de teatro');
+
+ 
