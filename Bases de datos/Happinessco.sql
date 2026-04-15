@@ -59,4 +59,37 @@ insert into eventos (fecha, titulo, ubicacion, tipo, descripcion) values
 ('2026-02-09', 'Gijón Horse Show - Concurso de Saltos Internacional', 'Gijón', 'otros', 'evento deportivo de hípica'),
 ('2026-02-06', 'Estreno Nacional: "La Madre"', 'Avilés', 'teatro', 'estreno de obra de teatro');
 
- 
+insert into galerias (titulo, id_evento) values
+('Galería Año Nuevo', 1),
+('Galería Arte', 2),
+('Galería Sella', 3);
+
+insert into imagenes (titulo, imagen, id_galeria) values
+('Foto 1 Ene', 'url1.jpg', 1), ('Foto 2 Ene', 'url2.jpg', 1), ('Foto 3 Ene', 'url3.jpg', 1),
+('Obra 1', 'url4.jpg', 2), ('Obra 2', 'url5.jpg', 2), ('Obra 3', 'url6.jpg', 2),
+('Piragua 1', 'url7.jpg', 3), ('Piragua 2', 'url8.jpg', 3), ('Piragua 3', 'url9.jpg', 3);
+
+insert into favoritos (id_usuario, id_evento) values
+(1, 1), (1, 2), (1, 4),
+(2, 1), (2, 3), (2, 5),
+(3, 2), (3, 3), (3, 6);
+
+create view vista_galerias_historial as
+select g.* from galerias g
+join eventos e on g.id_evento = e.id
+where e.fecha < '2026-02-28';
+
+create view favoritos_usuario_1 as
+select e.* from eventos e
+join favoritos f on e.id = f.id_evento
+where f.id_usuario = 1;
+
+create view imagenes_evento_especifico as
+select i.* from imagenes i
+join galerias g on i.id_galeria = g.id
+where g.id_evento = 2;
+
+create view favoritos_proximos_usuario_2 as
+select e.* from eventos e
+join favoritos f on e.id = f.id_evento
+where f.id_usuario = 2 and e.fecha > '2026-02-28';
