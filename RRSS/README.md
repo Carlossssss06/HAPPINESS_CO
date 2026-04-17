@@ -31,3 +31,4 @@ Una aplicación orientada a objetos que permite administrar el ciclo de vida de 
 Modelo relacional diseñado para garantizar la integridad de los datos.
 * **Tablas:** `usuarios`, `eventos`, `galerias`, `imagenes` y `favoritos`.
 * **Relaciones:** Implementación de claves foráneas (FK) para asegurar que, por ejemplo, una galería no exista sin un evento asociado, o que los favoritos se eliminen si el usuario desaparece.
+# HAPPINESS&Co: Ecosistema de Gestión y Difusión Cultural

@@ -820,3 +820,52 @@ body {
         margin-bottom: 20px;
     }
 }
+
+/* LATERAL DE EVENTOS Y HISTORIAL */
+
+.cuerpo-pagina-flex {
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.seccion-calendario {
+    flex: 3;
+    margin: 0 !important;
+}
+
+.barra-lateral {
+    flex: 1;
+    background-color: #fcfcfc;
+    padding: 25px;
+    border-radius: 15px;
+    border: 1px solid #f0f0f0;
+    position: sticky;
+    top: 100px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.02);
+}
+
+.miniatura-img {
+    width: 65px;
+    height: 65px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-right: 15px;
+}
+
+@media (max-width: 1100px) {
+    .cuerpo-pagina-flex {
+        flex-direction: column;
+    }
+    
+    .seccion-calendario, .barra-lateral {
+        width: 100%;
+        flex: none;
+    }
+
+    .barra-lateral {
+        position: static;
+    }
+}
