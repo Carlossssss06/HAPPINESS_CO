@@ -613,3 +613,115 @@ body {
 .boton-comprar-tickets:hover {
     background-color: #960064;
 }
+
+/* SOBRE NOSOTROS*/
+
+.listado-vinetas {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    margin: 50px 0;
+}
+
+.tarjeta-nosotros {
+    display: flex;
+    align-items: stretch;
+    background: #ffffff;
+    border-radius: 15px;
+    border: 1px solid #eeeeee;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease;
+}
+
+.tarjeta-nosotros:hover {
+    transform: translateY(-5px);
+}
+
+.invertida {
+    flex-direction: row-reverse;
+}
+
+.bloque-visual, .bloque-texto {
+    flex: 1;
+    min-height: 350px;
+}
+
+.bloque-visual {
+    background-color: #f9f9f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.bloque-visual img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.img-logo-quienes {
+    width: 60% !important;
+    height: auto !important;
+    object-fit: contain !important;
+}
+
+.bloque-texto {
+    padding: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.layout-equipo-central {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    background-color: #fff5fb;
+}
+
+.perfil-usuario {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.perfil-usuario img {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    border: 4px solid #ffffff;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    margin-bottom: 15px;
+    object-fit: cover;
+}
+
+.nombre-perfil {
+    font-size: 15px;
+    font-weight: bold;
+    color: #ba007c;
+    letter-spacing: 0.5px;
+}
+
+@media (max-width: 900px) {
+    .tarjeta-nosotros, .invertida {
+        flex-direction: column;
+    }
+
+    .bloque-visual {
+        min-height: 250px;
+    }
+
+    .bloque-texto {
+        padding: 40px 20px;
+        text-align: center;
+    }
+
+    .layout-equipo-central {
+        padding: 40px 0;
+        gap: 30px;
+    }
+}
